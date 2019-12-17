@@ -3,9 +3,10 @@ PyTorch implementation of  ICCV2019 paper Miss Detection vs. False Alarm: Advers
 
 # Guide
 1. Creating the following folders:
-    - training_results: this folder is to contain all the images of evaluation phases, to visualize the performance of model
-    - test_results: this folder is to contain the images during test phases
-    - logs: this folder is to contain all logs during training
+    - training_results: this folder is to contain all the images of evaluation phases, to visualize the performance of model.
+    - test_results: this folder is to contain the images during test phases.
+    - logs: this folder is to contain all logs during training.
+    - saved_models: to save the weight after each epoch.
 2. Dataset:
     The [official implementation](https://github.com/wanghuanphd/MDvsFA_cGAN) offers the dataset, the structure has to be:
     ```
@@ -18,7 +19,7 @@ PyTorch implementation of  ICCV2019 paper Miss Detection vs. False Alarm: Advers
     ```python
       python train.py
     ```
-    all the training parameters have default values
+    all the training parameters have default values.
   
 4. Using following command to test:
     ```python
