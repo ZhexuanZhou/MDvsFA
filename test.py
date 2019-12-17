@@ -33,20 +33,15 @@ gen1_net = nn.DataParallel(Generator1_CAN8()).cuda()
 gen2_net = nn.DataParallel(Generator2_UCAN64()).cuda()
 
 
-disc_net_weight = '/home/zz827/toolkits/MDvsFA/saved_models/discriminator_epoch_30.pth'
+disc_net_weight = './saved_models/discriminator_epoch_30.pth'
 disc_net.load_state_dict(torch.load(disc_net_weight))
-gen1_net_weight = '/home/zz827/toolkits/MDvsFA/saved_models/generator1_epoch_30.pth'
+gen1_net_weight = './saved_models/generator1_epoch_30.pth'
 gen1_net.load_state_dict(torch.load(gen1_net_weight))
-gen2_net_weight = '/home/zz827/toolkits/MDvsFA/saved_models/generator2_epoch_30.pth'
+gen2_net_weight = './saved_models/generator2_epoch_30.pth'
 gen2_net.load_state_dict(torch.load(gen2_net_weight))
 
 filenames = sorted(glob.glob('./data/test_org/*.png'))
 filenames = [x.split('/')[-1] for x in filenames]
-
-# sum_train_loss = 0 
-# sum_train_false_ratio = 0 
-# sum_train_detect_ratio = 0
-# sum_train_F1 = 0
 
 disc_net.eval()
 gen1_net.eval()
